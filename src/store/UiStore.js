@@ -2,8 +2,7 @@ import { decorate, observable, action } from 'mobx';
 import { fromPromise } from 'mobx-utils';
 
 class UiStore {
-	constructor() {
-		super();
+	constructor(store) {
 		this.store = store;
 	}
 }
