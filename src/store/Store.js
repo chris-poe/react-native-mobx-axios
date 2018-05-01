@@ -1,5 +1,6 @@
 import createApi from '../services/api';
 import AuthStore from './AuthStore';
+import UiStore from './UiStore';
 
 class Store {
 	constructor(config) {
