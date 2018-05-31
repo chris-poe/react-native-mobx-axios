@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "husky": "^0.14.3",
     "jest-expo": "26.0.0",
+    "lint-staged": "^7.1.2",
+    "prettier": "^1.13.3",
     "react-native-scripts": "1.13.2",
     "react-test-renderer": "16.3.0-alpha.1"
   },
@@ -13,10 +16,18 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier --write 'src/**/*.js'",
+    "precommit": "lint-staged"
   },
   "jest": {
     "preset": "jest-expo"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "axios": "^0.18.0",
