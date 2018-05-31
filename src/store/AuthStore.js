@@ -2,11 +2,11 @@ import { decorate, observable, computed, action } from 'mobx';
 import { fromPromise } from 'mobx-utils';
 
 class AuthStore {
-	constructor(store) {
-		this.store = store;
-	}
+  constructor(store) {
+    this.store = store;
+  }
 }
 
-decorate(AuthStore, {})
+decorate(AuthStore, {});
 
 export default AuthStore;

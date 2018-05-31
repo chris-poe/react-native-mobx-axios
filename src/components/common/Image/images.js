@@ -1,8 +1,8 @@
 import noImage from '../../assets/no-image.png';
 
 const images = {
-	noImage,
-}
+  noImage,
+};
 
 const getImage = name => images[name];
 
