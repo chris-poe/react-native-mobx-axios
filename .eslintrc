@@ -1,6 +1,9 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
   "rules": {
     // // disable mandatory .jsx
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
