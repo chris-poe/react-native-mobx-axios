@@ -1,4 +1,4 @@
-import noImage from '../../../assets/no-image.png';
+import noImage from '../../../assets/images/no_image.png';
 
 const images = {
   noImage,

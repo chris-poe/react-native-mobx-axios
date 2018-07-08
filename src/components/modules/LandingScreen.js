@@ -7,6 +7,7 @@ const styles = {
   container: {
     flex: 1,
     justifyContent: 'flex-end',
+    paddingBottom: 25,
   },
 };
 
