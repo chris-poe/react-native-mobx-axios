@@ -18,8 +18,6 @@ const variables = {
 
 const colors = {
   red: '#d85a42',
-  green: '#00ff00',
-  blue: '#0000ff',
   white: '#fff',
   black: '#000',
   gray: '#929292',
@@ -36,4 +34,3 @@ const theme = {
 };
 
 export default theme;
-

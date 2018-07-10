@@ -7,12 +7,12 @@ const styles = {
   container: {
     flex: 1,
     justifyContent: 'flex-end',
-    paddingBottom: 25,
+    paddingBottom: 45,
   },
 };
 
 export default () => (
-  <BackgroundImage name={null} style={styles.container}>
-    <ActivityIndicator color={theme.colors.white} style={styles.indicator} />
+  <BackgroundImage name="landing" style={styles.container}>
+    <ActivityIndicator color={theme.colors.gray} style={styles.indicator} />
   </BackgroundImage>
 );
