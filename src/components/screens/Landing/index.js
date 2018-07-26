@@ -12,6 +12,7 @@ const styles = {
     paddingBottom: 45,
   },
   error: {
+    color: theme.colors.red,
     textAlign: 'center',
   },
 };

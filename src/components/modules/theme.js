@@ -14,6 +14,8 @@ const debug = {
 
 const variables = {
   fontSize: 16,
+  borderRadius: 5,
+  padding: 5,
 };
 
 const colors = {
