@@ -5,7 +5,7 @@ import { Provider, observer } from 'mobx-react';
 import config from './src/config';
 import createStore from './src/store';
 
-import Landing from './src/components/Screens/landing';
+import Landing from './src/components/screens/Landing';
 import RootNavigator from './src/navigation/RootNavigator';
 
 const store = createStore(config);

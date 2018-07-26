@@ -3,7 +3,7 @@ import { Platform, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { IonIcon } from '../../components/modules/Icons';
 
-import CameraScreen from '../../components/Screens/camera';
+import CameraScreen from '../../components/screens/Camera';
 
 const CameraNavigator = createStackNavigator({
   Camera: {

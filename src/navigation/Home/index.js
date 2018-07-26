@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { IonIcon } from '../../components/modules/Icons';
 
-import HomeScreen from '../../components/Screens/home';
+import HomeScreen from '../../components/screens/Home';
 
 const HomeNavigator = createStackNavigator({
   Home: {

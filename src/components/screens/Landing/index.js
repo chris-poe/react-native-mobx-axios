@@ -1,4 +1,6 @@
 import React from 'react';
+import { Text } from 'react-native';
+
 import BackgroundImage from '../../modules/Image/BackgroundImage';
 import ActivityIndicator from '../../modules/Indicators/ActivityIndicator';
 import theme from '../../modules/theme';
@@ -9,10 +11,17 @@ const styles = {
     justifyContent: 'flex-end',
     paddingBottom: 45,
   },
+  error: {
+    textAlign: 'center',
+  },
 };
 
-export default () => (
+export default ({ error }) => (
   <BackgroundImage name="landing" style={styles.container}>
-    <ActivityIndicator color={theme.colors.gray} style={styles.indicator} />
+    {!error ? (
+      <ActivityIndicator color={theme.colors.gray} style={styles.indicator} />
+    ) : (
+      <Text>{error}</Text>
+    )}
   </BackgroundImage>
 );
