@@ -1,7 +1,7 @@
 import React from 'react';
-import BackgroundImage from './Image/BackgroundImage';
-import ActivityIndicator from './Indicators/ActivityIndicator';
-import theme from './theme';
+import BackgroundImage from '../../modules/Image/BackgroundImage';
+import ActivityIndicator from '../../modules/Indicators/ActivityIndicator';
+import theme from '../../modules/theme';
 
 const styles = {
   container: {

@@ -5,7 +5,8 @@ import { Provider, observer } from 'mobx-react';
 import config from './src/config';
 import createStore from './src/store';
 
-import LandingScreen from './src/components/modules/LandingScreen';
+import Landing from './src/components/Screens/landing';
+import RootNavigator from './src/navigation/RootNavigator';
 
 const store = createStore(config);
 
@@ -25,9 +26,9 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         {store.uiStore.initStatus.case({
-          pending: () => <LandingScreen />,
-          rejected: e => <LandingScreen error={e.message} />,
-          fulfilled: () => <View />,
+          pending: () => <Landing />,
+          rejected: e => <Landing error={e.message} />,
+          fulfilled: () => <RootNavigator />,
         })}
       </Provider>
     );

@@ -14,7 +14,7 @@ const styles = {
 
 const Avatar = ({ style, size }) => (
   <View style={[styles.avatar, { height: size, width: size }]}>
-    <BackgroundImage name="default_user" />
+    <BackgroundImage name="defaultUser" />
   </View>
 );
 

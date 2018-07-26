@@ -1,9 +1,9 @@
 import landing from '../../../assets/images/landing.png';
-import noImage from '../../../assets/images/no_image.png';
+import defaultUser from '../../../assets/images/default_user.png';
 
 const images = {
   landing,
-  noImage,
+  defaultUser,
 };
 
 const getImage = name => images[name];
