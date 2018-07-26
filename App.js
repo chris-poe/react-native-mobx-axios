@@ -8,6 +8,8 @@ import createStore from './src/store';
 import Landing from './src/components/screens/Landing';
 import RootNavigator from './src/navigation/RootNavigator';
 
+import SafeAreaView from './src/components/modules/Layout/SafeAreaView';
+
 const store = createStore(config);
 
 class App extends React.Component {
@@ -28,7 +30,11 @@ class App extends React.Component {
         {store.uiStore.initStatus.case({
           pending: () => <Landing />,
           rejected: e => <Landing error={e.message} />,
-          fulfilled: () => <RootNavigator />,
+          fulfilled: () => (
+            <SafeAreaView>
+              <RootNavigator />
+            </SafeAreaView>
+          ),
         })}
       </Provider>
     );
