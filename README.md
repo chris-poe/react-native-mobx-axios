@@ -1,3 +1,5 @@
+# React Native MobX Axios
+
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
 
 ## Table of Contents
@@ -8,6 +10,9 @@ Below you'll find information about performing common tasks. The most recent ver
   * [npm test](#npm-test)
   * [npm run ios](#npm-run-ios)
   * [npm run android](#npm-run-android)
+  * [npm clean](#npm-clean)
+  * [npm lint](#npm-lint)
+  * [npm format](#npm-format)
   * [npm run eject](#npm-run-eject)
 * [Writing and Running Tests](#writing-and-running-tests)
 * [Environment Variables](#environment-variables)
@@ -73,6 +78,24 @@ Like `npm start`, but also attempts to open your app on a connected Android devi
 1. Find Genymotion’s copy of adb. On macOS for example, this is normally `/Applications/Genymotion.app/Contents/MacOS/tools/`.
 2. Add the Genymotion tools directory to your path (instructions for [Mac](http://osxdaily.com/2014/08/14/add-new-path-to-path-command-line/), [Linux](http://www.computerhope.com/issues/ch001647.htm), and [Windows](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/)).
 3. Make sure that you can run adb from your terminal.
+
+#### `npm clean`
+
+**Configured for _yarn_ only**
+
+Clears Watchman, removes node modules, cleans yarn cache, and re-aquires node modules using yarn.
+
+#### `npm lint`
+
+Lints `src/` directory, logs errors and potential fixes.
+
+#### `npm lint:fix`
+
+Like `npm lint`, but also auto fixes problems found by initial lint.
+
+#### `npm format`
+
+Formats `src/` directory to Airbnb's .eslintrc extensible shared config.
 
 #### `npm run eject`
 
