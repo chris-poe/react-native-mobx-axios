@@ -1,9 +1,22 @@
 # React Native MobX Axios
 
-Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
+Starter template for React Native using create-react-native-app, MobX, and Axios.
+
+## Setup
+
+```
+npm install && npm start
+# or
+yarn install && yarn start
+```
 
 ## Table of Contents
 
+* [Modules](#modules)
+  * [Helper Modules](#helper-modules)
+  * [Image Modules](#image-modules)
+  * [Input Modules](#input-modules)
+  * [Layout Modules](#layout-modules)
 * [Updating to New Releases](#updating-to-new-releases)
 * [Available Scripts](#available-scripts)
   * [npm start](#npm-start)
@@ -29,6 +42,126 @@ Below you'll find information about performing common tasks. The most recent ver
   * [Networking](#networking)
   * [iOS Simulator won't open](#ios-simulator-wont-open)
   * [QR Code does not scan](#qr-code-does-not-scan)
+
+# Modules
+
+Below are built in modules for commonly used features.
+
+## Helper Modules
+
+### `withStore()`
+
+Allows you to easily inject MobX `store` when exporting a default class or function component.
+
+```js
+import React from 'react';
+
+class MyComponent extends React.Component {
+  render() {
+    return null;
+  }
+}
+
+export default withStore(MyComponent); // Injects store into MyComponent
+```
+
+## Image Modules
+
+### Importing Images
+
+Import images within `src/components/modules/Image/images.js`.
+
+```js
+import imageName from '<path-to-image-folder>';
+import otherImageName from '<path-to-image-folder>';
+
+const images = {
+  imageName,
+  otherImageName,
+};
+
+// Used to get image based on name prop
+const getImage = name => images[name];
+
+export default getImage;
+```
+
+### Calling Imported Images
+
+```js
+import Image from '<path-to-image-module>';
+
+<Image name="imageName" />
+```
+
+### Image props
+
+| Prop | Type | Default | Note |
+|---|---|---|---|
+| `name` | `string` | `null` | Passes value into `getImage()` and returns asset imported in `images.js`.
+| `source` | `object` | `null` | Same as default source prop for React Native. Reference [here](https://facebook.github.io/react-native/docs/image)
+| `resizeMode` | `string` | "contain" | Used to set image background-size property.
+
+### Using Background Images (Reference [here](https://facebook.github.io/react-native/docs/images#background-image-via-nesting))
+
+```js
+import BackgroundImage from '<path-to-background-image-module>';
+
+<BackgroundImage name="imageName">
+  // Inner content
+</BackgroundImage>
+```
+### Background Image props
+
+| Prop | Type | Default | Note |
+|---|---|---|---|
+| `name` | `string` | `null` | Passes value into `getImage()` and returns asset imported in `images.js`.
+| `source` | `object` | `null` | Same as default source prop for React Native.
+| `resizeMode` | `string` | "cover" | Used to set image background-size property.
+
+## Input Modules
+
+Sets input and keyboard type.
+
+> **Note**. Should be imported as named module i.e `import { module } from '<path>';`
+
+`<EmailInput />`
+
+`<MultilineTextInput />`
+
+`<NumericInput />`
+
+`<PhoneInput />`
+
+`<TextInput />`
+
+## Layout Modules
+
+### Container
+
+Extendable view container
+
+### SafeAreaView
+
+The purpose of SafeAreaView is to render content within the safe area boundaries of a device (Reference [here](https://facebook.github.io/react-native/docs/safeareaview)).
+> **Note**. iOS only.
+
+This component wraps the `<RootNavigator />` by default within `App.js`. It is also set to check for iPhone X specifically but can be adjusted to any number of devices.
+
+### Props
+
+| Prop | Type | Default | Note |
+|---|---|---|---|
+| `flex` | `boolean` | `null` | Sets **flex** property equal to **1**.
+| `stretch` | `boolean` | `null` | Sets **alignSelf** property equal to **1**.
+| `padding` | `boolean` | `null` | Sets default padding.
+| `centerHorizontal` | `boolean` | `null` | Sets **alignItems** equal to **center**.
+| `centerVertical` | `boolean` | `null` | Sets **justifyContent** equal to **center**.
+| `margin` | `boolean` | `null` | Sets default margin.
+
+# Common Tasks
+
+Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
 
 ## Updating to New Releases
 
