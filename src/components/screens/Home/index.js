@@ -1,4 +1,5 @@
 import React from 'react';
+import withStore from '../../modules/Helpers/withStore';
 
 class HomeScreen extends React.Component {
   render() {
@@ -6,4 +7,4 @@ class HomeScreen extends React.Component {
   }
 }
 
-export default HomeScreen;
+export default withStore(HomeScreen);
