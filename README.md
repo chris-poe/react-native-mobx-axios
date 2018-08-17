@@ -1,10 +1,12 @@
 # React Native MobX Axios
 
-Starter template for React Native using create-react-native-app, MobX, and Axios.
+Boilerplate for React Native using create-react-native-app, MobX, and Axios.
+
+> **Note**. This repo is mostly for my personal use. For that reason some documentation may be lacking.
 
 ## Setup
 
-```
+```bash
 npm install && npm start
 # or
 yarn install && yarn start
