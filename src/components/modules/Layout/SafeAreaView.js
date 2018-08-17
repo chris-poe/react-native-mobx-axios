@@ -4,12 +4,11 @@ import { Constants } from 'expo';
 import Container from './Container';
 
 export default ({ ...props }) => {
-  const platform = Constants.platform;
+  const { platform } = Constants;
   const requireSafeArea =
     (platform.ios && platform.ios.model.toLowerCase() === 'iphone x') || false;
   if (requireSafeArea) {
     return <SafeAreaView style={{ flex: 1 }} {...props} />;
-  } else {
-    return <Container flex {...props} />;
   }
+  return <Container flex {...props} />;
 };

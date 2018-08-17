@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import BackgroundImage from '../../modules/Image/BackgroundImage';
+import { BackgroundImage } from '../../modules/Image';
 import ActivityIndicator from '../../modules/Indicators/ActivityIndicator';
 import theme from '../../modules/theme';
 
