@@ -8,4 +8,4 @@ const images = {
 
 const getImage = name => images[name];
 
-export default getImage;
+export { images, getImage };

@@ -22,7 +22,7 @@ export default ({ error }) => (
     {!error ? (
       <ActivityIndicator color={theme.colors.gray} style={styles.indicator} />
     ) : (
-      <Text>{error}</Text>
+      <Text style={styles.error}>{error}</Text>
     )}
   </BackgroundImage>
 );

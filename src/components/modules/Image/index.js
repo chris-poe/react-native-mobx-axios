@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image as RNImage, ImageBackground } from 'react-native';
 
-import getImage from './images';
+import { getImage } from './images';
 
 const Image = ({ name, source, resizeMode, ...props }) => (
   <RNImage
