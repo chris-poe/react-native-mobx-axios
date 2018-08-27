@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { Camera, Permissions } from 'expo';
 
-import { IonIcon } from './Icons';
+import Icon from './Icon';
 import theme from './theme';
 
 const styles = {
@@ -58,7 +58,7 @@ export default class CameraExample extends React.Component {
               style={[styles.align, { flex: 0.125 }]}
               onPress={() => this.rotateCamera()}
             >
-              <IonIcon
+              <Icon
                 name="ios-reverse-camera-outline"
                 size={40}
                 style={{ color: theme.colors.white, marginLeft: 15 }}
@@ -72,7 +72,7 @@ export default class CameraExample extends React.Component {
                 }
               }}
             >
-              <IonIcon
+              <Icon
                 name="ios-radio-button-on-outline"
                 size={100}
                 style={{ color: theme.colors.white }}

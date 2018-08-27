@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import { IonIcon } from '../../components/modules/Icons';
+import Icon from '../../components/modules/Icon';
 
 import HomeScreen from '../../components/screens/Home';
 
@@ -24,7 +24,7 @@ const HomeNavigator = createStackNavigator({
 
 const HomeIcon = {
   tabBarIcon: ({ tintColor }) => (
-    <IonIcon name="ios-home-outline" size={40} color={tintColor} />
+    <Icon name="ios-home-outline" size={40} color={tintColor} />
   ),
 };
 

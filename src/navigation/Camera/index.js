@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import { IonIcon } from '../../components/modules/Icons';
+import Icon from '../../components/modules/Icon';
 
 import CameraScreen from '../../components/screens/Camera';
 
@@ -21,7 +21,7 @@ const CameraNavigator = createStackNavigator({
         paddingHorizontal: 15,
       },
       headerLeft: (
-        <IonIcon
+        <Icon
           name="ios-arrow-back-outline"
           onPress={() => navigation.goBack(null)}
           size={30}
