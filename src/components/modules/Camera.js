@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { Camera, Permissions } from 'expo';
 
@@ -17,7 +17,7 @@ const styles = {
   },
 };
 
-export default class CameraExample extends React.Component {
+export default class CameraExample extends Component {
   state = {
     hasCameraPermission: null,
     type: Camera.Constants.Type.back,

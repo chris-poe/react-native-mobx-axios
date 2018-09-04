@@ -20,7 +20,8 @@
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
     "start": "react-native-scripts start",
-    "clean": "watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn",
+    "clean": "watchman watch-del-all && rm -rf node_modules/ && npm install",
+    "clean:yarn": "yarn cache clean",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
