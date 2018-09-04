@@ -1,14 +1,15 @@
+import Expo from 'expo';
 import React from 'react';
 import { View } from 'react-native';
 import { Provider, observer } from 'mobx-react';
 
-import config from './src/config';
-import createStore from './src/store';
+import config from './config';
+import createStore from './store';
 
-import Landing from './src/components/screens/Landing';
-import RootNavigator from './src/navigation/RootNavigator';
+import Landing from './components/screens/Landing';
+import RootNavigator from './navigation/RootNavigator';
 
-import SafeAreaView from './src/components/modules/Layout/SafeAreaView';
+import SafeAreaView from './components/modules/Layout/SafeAreaView';
 
 const store = createStore(config);
 
@@ -41,4 +42,4 @@ class App extends React.Component {
   }
 }
 
-export default observer(App);
+export default Expo.registerRootComponent(observer(App));
