@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-native-scripts start",
     "clean": "watchman watch-del-all && rm -rf node_modules/ && npm install",
-    "clean:yarn": "yarn cache clean",
+    "clean:yarn": "watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",

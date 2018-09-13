@@ -6,6 +6,7 @@ import { images, getImage } from '../components/modules/Image/images';
 class UiStore {
   constructor(store) {
     this.store = store;
+    Asset.fromModule(getImage('landing')).downloadAsync();
   }
 
   // Observables

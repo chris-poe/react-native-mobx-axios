@@ -1,6 +1,5 @@
 import Expo from 'expo';
 import React from 'react';
-import { View } from 'react-native';
 import { Provider, observer } from 'mobx-react';
 
 import config from './config';
@@ -9,7 +8,7 @@ import createStore from './store';
 import Landing from './components/screens/Landing';
 import RootNavigator from './navigation/RootNavigator';
 
-import SafeAreaView from './components/modules/Layout/SafeAreaView';
+import { SafeAreaView } from './components/modules/Layout';
 
 const store = createStore(config);
 
@@ -20,7 +19,7 @@ class App extends React.Component {
   }
 
   render() {
-    const initStatus = store.uiStore.initStatus;
+    const { initStatus } = store.uiStore;
 
     if (!initStatus) {
       return null;

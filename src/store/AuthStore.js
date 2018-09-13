@@ -1,5 +1,4 @@
-import { decorate, observable, computed, action } from 'mobx';
-import { fromPromise } from 'mobx-utils';
+import { decorate } from 'mobx';
 
 class AuthStore {
   constructor(store) {
