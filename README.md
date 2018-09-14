@@ -196,7 +196,7 @@ Open it in the [Expo app](https://expo.io) on your phone to view it. It will rel
 
 Sometimes you may need to reset or clear the React Native packager's cache. To do so, you can pass the `--reset-cache` flag to the start script:
 
-```
+```bash
 npm start --reset-cache
 # or
 yarn start --reset-cache
@@ -281,7 +281,7 @@ In some cases, this is less than ideal. This might be the case if you need to ru
 
 Mac and Linux:
 
-```
+```bash
 REACT_NATIVE_PACKAGER_HOSTNAME='my-custom-ip-address-or-hostname' npm start
 ```
 
@@ -321,7 +321,7 @@ Expo provides free hosting for the JS-only apps created by CRNA, allowing you to
 
 Install the `exp` command-line tool, and run the publish command:
 
-```
+```bash
 $ npm i -g exp
 $ exp publish
 ```
