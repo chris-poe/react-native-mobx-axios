@@ -5,15 +5,26 @@ import { variables, colors } from '../theme';
 const styles = {
   input: {
     height: 50,
+    backgroundColor: colors.white,
     fontSize: variables.fontSize,
-    color: colors.gray,
+    color: colors.black,
     padding: variables.padding,
-    borderWidth: 1,
-    borderColor: colors.mediumGray,
     borderRadius: variables.borderRadius,
+  },
+  default: {
+    borderWidth: 1,
+    borderColor: colors.lightGray,
+  },
+  error: {
+    borderWidth: 2,
+    borderColor: colors.red,
   },
 };
 
-export default ({ style, ...props }) => (
-  <TextInput style={[styles.input, style]} {...props} />
+export default ({ error, style, ...props }) => (
+  <TextInput
+    placeholderTextColor={error && 'rgba(216,90,66,0.5)'}
+    style={[error ? styles.error : styles.default, styles.input, style]}
+    {...props}
+  />
 );

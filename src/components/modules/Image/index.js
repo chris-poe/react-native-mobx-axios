@@ -3,10 +3,27 @@ import { Image as RNImage, ImageBackground } from 'react-native';
 
 import { getImage } from './images';
 
-const Image = ({ name, source, resizeMode, ...props }) => (
+const Image = ({
+  name,
+  source,
+  resizeMode,
+  center,
+  width,
+  height,
+  style,
+  ...props
+}) => (
   <RNImage
     source={name ? getImage(name) : source}
     resizeMode={resizeMode || 'contain'}
+    style={[
+      center && {
+        alignSelf: 'center',
+      },
+      width && { width },
+      height && { height },
+      style,
+    ]}
     {...props}
   />
 );

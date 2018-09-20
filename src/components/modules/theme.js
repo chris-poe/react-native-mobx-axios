@@ -19,6 +19,7 @@ const variables = {
 };
 
 const colors = {
+  orange: '#f29955', // #fde078
   red: '#d85a42',
   white: '#fff',
   black: '#000',

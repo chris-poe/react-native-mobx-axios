@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import Touchable from '../Touchable';
-import ActivityIndicator from '../Indicators/ActivityIndicator';
-import { colors, variables } from '../theme';
+import Touchable from './Touchable';
+import ActivityIndicator from './Indicators/ActivityIndicator';
+import { colors, variables } from './theme';
 
 const styles = {
   button: {
-    height: 65,
+    height: 50,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: colors.white,

@@ -1,20 +1,17 @@
 import React from 'react';
-import { View } from 'react-native';
-import { colors } from '../theme';
+import { View, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
 const styles = {
-  container: {
-    backgroundColor: colors.white,
-  },
   flex: {
     flex: 1,
   },
   stretch: {
+    flex: 1,
     alignSelf: 'stretch',
   },
-  padding: {
-    paddingHorizontal: 10,
-    paddingVertical: '2.5%',
+  center: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   centerHorizontal: {
     alignItems: 'center',
@@ -22,31 +19,38 @@ const styles = {
   centerVertical: {
     justifyContent: 'center',
   },
+  padding: {
+    paddingHorizontal: 10,
+    paddingVertical: '2.5%',
+  },
 };
 
 const Container = ({
   flex,
   stretch,
-  padding,
+  center,
   centerHorizontal,
   centerVertical,
-  margin,
+  padding,
+  color,
   style,
   ...props
 }) => (
-  <View
-    style={[
-      styles.container,
-      flex && styles.flex,
-      stretch && styles.stretch,
-      padding && styles.padding,
-      centerHorizontal && styles.centerHorizontal,
-      centerVertical && styles.centerVertical,
-      margin,
-      style,
-    ]}
-    {...props}
-  />
+  <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+    <View
+      style={[
+        flex && styles.flex,
+        stretch && styles.stretch,
+        center && styles.center,
+        centerHorizontal && styles.centerHorizontal,
+        centerVertical && styles.centerVertical,
+        padding && styles.padding,
+        color && { backgroundColor: color },
+        style,
+      ]}
+      {...props}
+    />
+  </TouchableWithoutFeedback>
 );
 
 export default Container;

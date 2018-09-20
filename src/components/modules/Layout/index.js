@@ -1,5 +1,5 @@
-import Button from './Button';
 import Container from './Container';
 import SafeAreaView from './SafeAreaView';
+import KeyboardAwareScroll from './KeyboardAwareScroll';
 
-export { Button, Container, SafeAreaView };
+export { Container, SafeAreaView, KeyboardAwareScroll };
