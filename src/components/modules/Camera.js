@@ -20,7 +20,7 @@ const styles = {
 export default class Camera extends Component {
   state = {
     hasCameraPermission: null,
-    type: Camera.Constants.Type.back,
+    type: ExpoCamera.Constants.Type.back,
   };
 
   async componentWillMount() {
@@ -31,9 +31,9 @@ export default class Camera extends Component {
   rotateCamera = () => {
     this.setState({
       type:
-        this.state.type === Camera.Constants.Type.back
-          ? Camera.Constants.Type.front
-          : Camera.Constants.Type.back,
+        this.state.type === ExpoCamera.Constants.Type.back
+          ? ExpoCamera.Constants.Type.front
+          : ExpoCamera.Constants.Type.back,
     });
   };
 
