@@ -5,7 +5,7 @@ import Icon from '../../components/modules/Icon';
 
 import CameraScreen from '../../components/screens/Camera';
 
-const CameraNavigator = createStackNavigator({
+export default (CameraNavigator = createStackNavigator({
   Camera: {
     screen: CameraScreen,
     navigationOptions: ({ navigation }) => ({
@@ -29,6 +29,4 @@ const CameraNavigator = createStackNavigator({
       ),
     }),
   },
-});
-
-export default CameraNavigator;
+}));

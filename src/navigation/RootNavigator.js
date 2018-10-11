@@ -42,7 +42,7 @@ const MainNavigator = createStackNavigator(
   }
 );
 
-const RootNavigator = createStackNavigator(
+export default (RootNavigator = createStackNavigator(
   {
     Main: { screen: MainNavigator },
   },
@@ -53,6 +53,4 @@ const RootNavigator = createStackNavigator(
       gesturesEnabled: false,
     },
   }
-);
-
-export default RootNavigator;
+));

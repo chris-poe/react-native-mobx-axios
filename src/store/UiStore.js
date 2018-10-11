@@ -3,7 +3,7 @@ import { decorate, observable, action } from 'mobx';
 import { fromPromise } from 'mobx-utils';
 import { images, getImage } from '../components/modules/Image/images';
 
-class UiStore {
+export default class UiStore {
   constructor(store) {
     this.store = store;
     Asset.fromModule(getImage('landing')).downloadAsync();
@@ -34,5 +34,3 @@ decorate(UiStore, {
   init: action,
   preloadImages: action,
 });
-
-export default UiStore;

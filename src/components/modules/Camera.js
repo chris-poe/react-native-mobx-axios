@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
-import { Camera, Permissions } from 'expo';
+import { Camera as ExpoCamera, Permissions } from 'expo';
 
 import Icon from './Icon';
 import { colors } from './theme';
@@ -17,7 +17,7 @@ const styles = {
   },
 };
 
-export default class CameraExample extends Component {
+export default class Camera extends Component {
   state = {
     hasCameraPermission: null,
     type: Camera.Constants.Type.back,
@@ -46,7 +46,7 @@ export default class CameraExample extends Component {
     }
     return (
       <View style={{ flex: 1 }}>
-        <Camera
+        <ExpoCamera
           style={{ flex: 1 }}
           type={this.state.type}
           ref={ref => {
@@ -79,7 +79,7 @@ export default class CameraExample extends Component {
               />
             </TouchableOpacity>
           </View>
-        </Camera>
+        </ExpoCamera>
       </View>
     );
   }

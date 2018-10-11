@@ -2,7 +2,7 @@ import createApi from '../services/api';
 import AuthStore from './AuthStore';
 import UiStore from './UiStore';
 
-class Store {
+export default class Store {
   constructor(config) {
     this.config = config;
 
@@ -14,5 +14,3 @@ class Store {
     });
   }
 }
-
-export default Store;
