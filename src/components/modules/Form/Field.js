@@ -7,8 +7,6 @@ const styles = {
   },
 };
 
-const Field = ({ style, children }) => (
+export default (Field = ({ style, children }) => (
   <Container style={[styles.container, style]}>{children}</Container>
-);
-
-export default Field;
+));

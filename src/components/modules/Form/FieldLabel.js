@@ -9,6 +9,6 @@ const styles = {
   },
 };
 
-export default ({ field, style }) => (
+export default (FieldLabel = ({ field, style }) => (
   <Text style={[styles.input, style]}>{field.label || field.name}</Text>
-);
+));

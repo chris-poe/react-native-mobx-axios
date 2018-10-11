@@ -8,7 +8,7 @@ import en from 'validatorjs/src/lang/en';
 
 lang._set('en', en);
 
-const createForm = ({ fields, onSuccess, onError }) => {
+export default (createForm = ({ fields, onSuccess, onError }) => {
   const options = {
     showErrorsOnInit: false,
     showErrorsOnChange: false,
@@ -26,6 +26,4 @@ const createForm = ({ fields, onSuccess, onError }) => {
   };
 
   return new MobxReactForm({ fields }, { options, plugins, hooks });
-};
-
-export default createForm;
+});

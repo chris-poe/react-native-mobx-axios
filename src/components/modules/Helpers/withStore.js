@@ -1,5 +1,3 @@
 import { inject, observer } from 'mobx-react';
 
-const withStore = Component => inject('store')(observer(Component));
-
-export default withStore;
+export default (withStore = Component => inject('store')(observer(Component)));

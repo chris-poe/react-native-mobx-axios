@@ -1,23 +1,30 @@
 import React from 'react';
 import { View, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { variables } from '../theme';
 
 const styles = {
   flex: {
     flex: 1,
   },
+  row: {
+    flexDirection: 'row',
+  },
   stretch: {
     flex: 1,
     alignSelf: 'stretch',
+  },
+  statusBar: {
+    paddingTop: variables.STATUSBAR_HEIGHT,
   },
   center: {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  centerHorizontal: {
-    alignItems: 'center',
-  },
   centerVertical: {
     justifyContent: 'center',
+  },
+  centerHorizontal: {
+    alignItems: 'center',
   },
   padding: {
     paddingHorizontal: 10,
@@ -25,12 +32,12 @@ const styles = {
   },
 };
 
-const Container = ({
+export default (Container = ({
   flex,
+  row,
   stretch,
+  statusBar,
   center,
-  centerHorizontal,
-  centerVertical,
   padding,
   color,
   style,
@@ -40,17 +47,17 @@ const Container = ({
     <View
       style={[
         flex && styles.flex,
+        row && styles.row,
         stretch && styles.stretch,
-        center && styles.center,
-        centerHorizontal && styles.centerHorizontal,
-        centerVertical && styles.centerVertical,
-        padding && styles.padding,
+        statusBar && styles.statusBar,
+        center === true && styles.center,
+        center === 'vertical' && styles.centerVertical,
+        center === 'horizontal' && styles.centerHorizontal,
+        padding === true ? styles.padding : { padding },
         color && { backgroundColor: color },
         style,
       ]}
       {...props}
     />
   </TouchableWithoutFeedback>
-);
-
-export default Container;
+));

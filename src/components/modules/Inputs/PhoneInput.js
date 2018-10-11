@@ -1,8 +1,6 @@
 import React from 'react';
 import TextInput from './TextInput';
 
-const PhoneInput = props => (
+export default (PhoneInput = props => (
   <TextInput autoCapitalize="none" keyboardType="phone-pad" {...props} />
-);
-
-export default PhoneInput;
+));

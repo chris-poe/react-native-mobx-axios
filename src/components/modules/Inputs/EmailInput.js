@@ -1,8 +1,6 @@
 import React from 'react';
 import TextInput from './TextInput';
 
-const EmailInput = props => (
+export default (EmailInput = props => (
   <TextInput autoCapitalize="none" keyboardType="email-address" {...props} />
-);
-
-export default EmailInput;
+));

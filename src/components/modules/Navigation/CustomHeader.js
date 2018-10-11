@@ -9,10 +9,8 @@ const styles = {
   },
 };
 
-const CustomHeader = ({ headerProps }) => (
+export default (CustomHeader = ({ headerProps }) => (
   <View style={styles.container}>
     <Header {...headerProps} />
   </View>
-);
-
-export default CustomHeader;
+));

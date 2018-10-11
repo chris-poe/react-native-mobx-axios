@@ -1,6 +1,7 @@
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
+const STATUSBAR_HEIGHT = Platform.select({ ios: 20, android: 0 });
 
 const debug = {
   borderWidth: 1,
@@ -13,13 +14,14 @@ const device = {
 };
 
 const variables = {
+  STATUSBAR_HEIGHT,
   fontSize: 16,
   borderRadius: 5,
   padding: 5,
 };
 
 const colors = {
-  red: '#d85a42',
+  red: '#ef551d',
   white: '#fff',
   black: '#000',
   gray: '#929292',

@@ -3,17 +3,19 @@ import TextInput from './TextInput';
 
 const styles = {
   multiline: {
-    height: 150,
+    height: 50,
   },
 };
 
-const MultilineTextInput = ({ style, numberOfLines = 3, ...props }) => (
+export default (MultilineTextInput = ({
+  style,
+  numberOfLines = 3,
+  ...props
+}) => (
   <TextInput
     style={[styles.multiline, style]}
     numberOfLines={numberOfLines}
     multiline
     {...props}
   />
-);
-
-export default MultilineTextInput;
+));

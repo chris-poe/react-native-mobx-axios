@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 
 import Touchable from './Touchable';
 import ActivityIndicator from './Indicators/ActivityIndicator';
+import Icon from './Icon';
 import { colors, variables } from './theme';
 
 const styles = {
@@ -24,26 +25,26 @@ const styles = {
   },
 };
 
-const Button = ({
+export default (Button = ({
   text,
   disabled,
-  loading,
+  pending,
   rounded,
   children,
+  icon,
   style,
   ...props
 }) => (
   <Touchable
     style={[rounded && styles.rounded, styles.button, style]}
-    disabled={disabled || loading}
+    disabled={disabled || pending}
     {...props}
   >
     <View>
-      {!loading && text && <Text style={styles.text}>{text}</Text>}
-      {!loading && children && children}
-      {loading && <ActivityIndicator size="small" />}
+      {!pending && text && <Text style={styles.text}>{text}</Text>}
+      {!pending && children && children}
+      {pending && <ActivityIndicator size="small" />}
+      {icon && <Icon name={icon} size={32} />}
     </View>
   </Touchable>
-);
-
-export default Button;
+));
