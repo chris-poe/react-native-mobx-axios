@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import withStore from '../../modules/Helpers/withStore';
+import withStore from '../../common/Helpers/withStore';
 
 class HomeScreen extends Component {
   render() {

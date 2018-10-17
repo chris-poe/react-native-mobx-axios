@@ -1,7 +1,7 @@
 import { Asset } from 'expo';
 import { decorate, observable, action } from 'mobx';
 import { fromPromise } from 'mobx-utils';
-import { images, getImage } from '../components/modules/Image/images';
+import { images, getImage } from '../components/common/Image/images';
 
 export default class UiStore {
   constructor(store) {

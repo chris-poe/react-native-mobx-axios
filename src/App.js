@@ -8,7 +8,7 @@ import createStore from './store';
 import Landing from './components/screens/Landing';
 import RootNavigator from './navigation/RootNavigator';
 
-import { SafeAreaView } from './components/modules/Layout';
+import { SafeAreaView } from './components/common/Layout';
 
 const store = createStore(config);
 
