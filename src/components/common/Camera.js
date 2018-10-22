@@ -18,6 +18,12 @@ const styles = {
 };
 
 export default class Camera extends Component {
+  constructor() {
+    super();
+    this.takePicture = this.takePicture.bind(this);
+    this.rotateCamera = this.rotateCamera.bind(this);
+  }
+
   state = {
     hasCameraPermission: null,
     type: ExpoCamera.Constants.Type.back,
@@ -28,14 +34,20 @@ export default class Camera extends Component {
     this.setState({ hasCameraPermission: status === 'granted' });
   }
 
-  rotateCamera = () => {
+  async takePicture() {
+    if (this.camera) {
+      const photo = await this.camera.takePictureAsync();
+    }
+  }
+
+  rotateCamera() {
     this.setState({
       type:
         this.state.type === ExpoCamera.Constants.Type.back
           ? ExpoCamera.Constants.Type.front
           : ExpoCamera.Constants.Type.back,
     });
-  };
+  }
 
   render() {
     const { hasCameraPermission } = this.state;
@@ -56,7 +68,7 @@ export default class Camera extends Component {
           <View style={styles.row}>
             <TouchableOpacity
               style={[styles.align, { flex: 0.125 }]}
-              onPress={() => this.rotateCamera()}
+              onPress={this.rotateCamera}
             >
               <Icon
                 name="ios-reverse-camera-outline"
@@ -66,11 +78,7 @@ export default class Camera extends Component {
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.align, { flex: 0.75 }]}
-              onPress={async () => {
-                if (this.camera) {
-                  const photo = await this.camera.takePictureAsync();
-                }
-              }}
+              onPress={this.takePicture}
             >
               <Icon
                 name="ios-radio-button-on-outline"
