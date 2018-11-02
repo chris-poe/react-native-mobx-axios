@@ -1,9 +1,31 @@
-import { decorate } from 'mobx';
+import { observable, computed, action } from 'mobx';
 
 export default class AuthStore {
   constructor(store) {
     this.store = store;
   }
-}
 
-decorate(AuthStore, {});
+  @observable
+  token;
+  @observable
+  sessionStatus;
+
+  @computed
+  get isLoggedIn() {
+    return Boolean(this.token);
+  }
+
+  @action
+  setToken = token => {
+    this.token = token;
+  };
+
+  @action
+  logIn = async ({ login, password }) => {
+    const sessionPromise = this.store.api.auth.logIn({ login, password });
+    this.sessionStatus = fromPromise(sessionPromise);
+
+    const { token } = await sessionPromise;
+    // Handle Auth
+  };
+}

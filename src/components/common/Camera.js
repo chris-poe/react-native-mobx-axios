@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { Camera as ExpoCamera, Permissions } from 'expo';
+import { boundMethod } from 'autobind-decorator';
 
 import Icon from './Icon';
 import { colors } from './theme';
@@ -18,12 +19,6 @@ const styles = {
 };
 
 export default class Camera extends Component {
-  constructor() {
-    super();
-    this.takePicture = this.takePicture.bind(this);
-    this.rotateCamera = this.rotateCamera.bind(this);
-  }
-
   state = {
     hasCameraPermission: null,
     type: ExpoCamera.Constants.Type.back,
@@ -34,12 +29,14 @@ export default class Camera extends Component {
     this.setState({ hasCameraPermission: status === 'granted' });
   }
 
+  @boundMethod
   async takePicture() {
     if (this.camera) {
       const photo = await this.camera.takePictureAsync();
     }
   }
 
+  @boundMethod
   rotateCamera() {
     this.setState({
       type:

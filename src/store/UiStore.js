@@ -1,5 +1,5 @@
 import { Asset } from 'expo';
-import { decorate, observable, action } from 'mobx';
+import { observable, action } from 'mobx';
 import { fromPromise } from 'mobx-utils';
 import { images, getImage } from '../components/common/Image/images';
 
@@ -9,12 +9,13 @@ export default class UiStore {
     Asset.fromModule(getImage('landing')).downloadAsync();
   }
 
-  // Observables
+  @observable
   initStatus;
 
-  // Actions
+  @action
   sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
+  @action
   init = async () => {
     const initPromise = Promise.all([this.preloadImages(), this.sleep(2000)]);
     this.initStatus = fromPromise(initPromise);
@@ -22,15 +23,10 @@ export default class UiStore {
     await initPromise;
   };
 
+  @action
   preloadImages = async () => {
     await Object.keys(images).map(image =>
       Asset.fromModule(getImage(image)).downloadAsync()
     );
   };
 }
-
-decorate(UiStore, {
-  initStatus: observable,
-  init: action,
-  preloadImages: action,
-});
