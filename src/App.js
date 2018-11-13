@@ -1,4 +1,4 @@
-import Expo from 'expo';
+import * as Expo from 'expo';
 import React from 'react';
 import { Provider, observer } from 'mobx-react';
 
