@@ -46,7 +46,7 @@
     "axios": "^0.18.0",
     "expo": "^31.0.4",
     "mobx": "^4.3.0",
-    "mobx-react": "^5.1.2",
+    "mobx-react": "^5.3.6",
     "mobx-utils": "^4.0.1",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
