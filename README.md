@@ -229,10 +229,6 @@ Like `npm start`, but also attempts to open your app on a connected Android devi
 
 Removes node modules and re-aquires using `npm install`.
 
-#### `npm clean:yarn`
-
-Clears yarn cache.
-
 #### `npm clean:watchman`
 
 Removes all watches, associated triggers, and exits Watchman server.
