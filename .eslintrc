@@ -5,9 +5,7 @@
     "prettier"
   ],
   "rules": {
-    // disable mandatory .jsx
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    // disable prop-type validation
     "react/prop-types": 0
   },
   "globals": {
