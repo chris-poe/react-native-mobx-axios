@@ -43,7 +43,7 @@
   "dependencies": {
     "@expo/vector-icons": "^6.3.1",
     "autobind-decorator": "^2.2.0",
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "expo": "^31.0.4",
     "mobx": "^4.3.0",
     "mobx-react": "^5.3.6",
