@@ -1,4 +1,5 @@
 import { observable, computed, action } from 'mobx';
+import { fromPromise } from 'mobx-utils';
 
 export default class AuthStore {
   constructor(store) {
@@ -7,6 +8,7 @@ export default class AuthStore {
 
   @observable
   token;
+
   @observable
   sessionStatus;
 

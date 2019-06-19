@@ -32,7 +32,7 @@ const styles = {
   },
 };
 
-export default (Container = ({
+export default ({
   flex,
   row,
   stretch,
@@ -60,4 +60,4 @@ export default (Container = ({
       {...props}
     />
   </TouchableWithoutFeedback>
-));
+);

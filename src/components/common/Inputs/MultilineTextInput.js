@@ -7,15 +7,11 @@ const styles = {
   },
 };
 
-export default (MultilineTextInput = ({
-  style,
-  numberOfLines = 3,
-  ...props
-}) => (
+export default ({ style, numberOfLines = 3, ...props }) => (
   <TextInput
     style={[styles.multiline, style]}
     numberOfLines={numberOfLines}
     multiline
     {...props}
   />
-));
+);

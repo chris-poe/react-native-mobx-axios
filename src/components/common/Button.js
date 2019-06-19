@@ -25,7 +25,7 @@ const styles = {
   },
 };
 
-export default (Button = ({
+export default ({
   text,
   disabled,
   pending,
@@ -47,4 +47,4 @@ export default (Button = ({
       {icon && <Icon name={icon} size={32} />}
     </View>
   </Touchable>
-));
+);

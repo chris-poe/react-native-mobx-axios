@@ -1,4 +1,4 @@
-import { Asset } from 'expo';
+import { Asset } from 'expo-asset';
 import { observable, action } from 'mobx';
 import { fromPromise } from 'mobx-utils';
 import { images, getImage } from '../components/common/Image/images';

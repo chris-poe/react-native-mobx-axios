@@ -32,7 +32,7 @@ export default class Camera extends Component {
   @boundMethod
   async takePicture() {
     if (this.camera) {
-      const photo = await this.camera.takePictureAsync();
+      await this.camera.takePictureAsync();
     }
   }
 
@@ -50,7 +50,8 @@ export default class Camera extends Component {
     const { hasCameraPermission } = this.state;
     if (hasCameraPermission === null) {
       return <View />;
-    } else if (hasCameraPermission === false) {
+    }
+    if (hasCameraPermission === false) {
       return <Text>No access to camera</Text>;
     }
     return (

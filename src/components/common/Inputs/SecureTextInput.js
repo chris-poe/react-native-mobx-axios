@@ -1,6 +1,6 @@
 import React from 'react';
 import TextInput from './TextInput';
 
-export default (SecureTextInput = props => (
+export default ({ props }) => (
   <TextInput autoCapitalize="none" secureTextEntry {...props} />
-));
+);

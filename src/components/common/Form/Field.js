@@ -7,6 +7,6 @@ const styles = {
   },
 };
 
-export default (Field = ({ style, children }) => (
+export default ({ style, children }) => (
   <Container style={[styles.container, style]}>{children}</Container>
-));
+);

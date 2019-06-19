@@ -9,10 +9,10 @@ const styles = {
   },
 };
 
-export default (List = ({
+export default ({
   data = null,
   keyExtractor = item => String(item.id),
-  renderItem = item => null,
+  renderItem = () => null,
   onPressItem,
   disabled,
   showsHorizontalScrollIndicator = false,
@@ -39,4 +39,4 @@ export default (List = ({
     style={[styles.container, style]}
     {...props}
   />
-));
+);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal as RNModal } from 'react-native';
 
-export default (Modal = ({ animationType, visable, transparent, ...props }) => (
+export default ({ animationType, visable, transparent, ...props }) => (
   <RNModal
     animationType={animationType || 'slide'}
     onRequestClose={() => null}
@@ -9,4 +9,4 @@ export default (Modal = ({ animationType, visable, transparent, ...props }) => (
     transparent={transparent}
     {...props}
   />
-));
+);
